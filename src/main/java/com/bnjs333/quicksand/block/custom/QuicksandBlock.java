@@ -2,11 +2,9 @@ package com.bnjs333.quicksand.block.custom;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.FallingBlockEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.tag.EntityTypeTags;
 import net.minecraft.sound.SoundEvent;
@@ -34,7 +32,7 @@ public class QuicksandBlock extends Block {
     }
 
     public boolean isSideInvisible(BlockState state, BlockState stateFrom, Direction direction) {
-        return stateFrom.isOf(this) ? true : super.isSideInvisible(state, stateFrom, direction);
+        return stateFrom.isOf(this) || super.isSideInvisible(state, stateFrom, direction);
     }
 
     public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
