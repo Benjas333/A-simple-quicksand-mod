@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "quicksand",
+	"version": "${version}",
+	"name": "A simple quicksand mod",
+	"description": "My first f*cking mod! :D",
+	"authors": [
+		"Benjas333"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/quicksand/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.bnjs333.quicksand.Quicksand"
+		],
+		"client": [
+			"com.bnjs333.quicksand.QuicksandClient"
+		],
+		"fabric-datagen": [
+			"com.bnjs333.quicksand.QuicksandDataGenerator"
+		]
+	},
+	"mixins": [
+		"quicksand.mixins.json",
+		{
+			"config": "quicksand.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
