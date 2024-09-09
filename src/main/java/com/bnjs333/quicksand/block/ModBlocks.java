@@ -20,6 +20,9 @@ public class ModBlocks {
     public static final Block QUICKSAND = registerBlock("quicksand",
             new QuicksandBlock(FabricBlockSettings.copyOf(Blocks.POWDER_SNOW).sounds(BlockSoundGroup.MUD).strength(0.5F)));
 
+//    public static final Block TEST = registerBlock("doge_block",
+//            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(Quicksand.MOD_ID, name), block);
